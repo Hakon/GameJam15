@@ -3,9 +3,6 @@
 public var Direction : Vector3;
 
 function Start () {
-
-}
-
-function Update () {
-	transform.position = transform.position + Direction;
+	var controller : Rigidbody = GetComponent(Rigidbody);
+	controller.velocity = Direction;
 }
