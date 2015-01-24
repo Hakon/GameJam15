@@ -2,10 +2,15 @@
 
 function OnControllerColliderHit(hit : ControllerColliderHit)
 {
-    if(hit.collider.CompareTag ("Van"))
+    if(hit.collider.CompareTag ("Money"))
     {
-    	// game over
+    	Debug.Log("Get money");
 	}	
+	else if(hit.collider.CompareTag ("Van"))
+	{
+    	Debug.Log("Crashed into big obstacle");
+	}	
+	
 }
 
 function OnTriggerEnter(col : Collider)
