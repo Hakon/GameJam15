@@ -1,14 +1,17 @@
 ﻿#pragma strict
 
+public var gameHandler : Score;
+
 function OnControllerColliderHit(hit : ControllerColliderHit)
 {
     if(hit.collider.CompareTag ("Money"))
     {
-    	Debug.Log("Get money");
+    	Destroy(hit.collider.gameObject);
+    	gameHandler.IncreaseScore();
 	}	
 	else if(hit.collider.CompareTag ("Van"))
 	{
-    	Debug.Log("Crashed into big obstacle");
+    	// crashed into large obstacle
 	}	
 	
 }
@@ -17,6 +20,6 @@ function OnTriggerEnter(col : Collider)
 {
 	if(col.CompareTag("Police"))
 	{
-    	Debug.Log("Game Over");
+    	// game over
 	}
 }
