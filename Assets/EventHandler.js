@@ -1,14 +1,9 @@
 ﻿#pragma strict
 
-function OnCollisionEnter(col)
+function OnControllerColliderHit(hit : ControllerColliderHit)
 {
-	Debug.Log("Kake");
-	}
-
-function Start () {
-
-}
-
-function Update () {
-
+    if(hit.collider.CompareTag ("Police"))
+    {
+    	// game over
+	}	
 }
