@@ -22,11 +22,10 @@ public class LineUpdater : MonoBehaviour {
 		
 		Ray ray = new Ray(object1.transform.position, object2.transform.position - object1.transform.position);
 		RaycastHit hit;
-		if(Physics.Raycast(ray, out hit, 100f)){
-			if(hit.transform.gameObject.tag == "Van"){
-				object1.transform.position = prevPos1;
-				object2.transform.position = prevPos2;
-			}
+		if(Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Hinder"))){
+			object1.transform.position = prevPos1;
+			object2.transform.position = prevPos2;
+			Debug.Log ("Hinder!");
 		}
 
 		prevPos1 = object1.transform.position;
