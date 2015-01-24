@@ -9,7 +9,11 @@ function OnControllerColliderHit(hit : ControllerColliderHit)
     	Destroy(hit.collider.gameObject);
     	gameHandler.IncreaseScore();
 	}	
-	else if(hit.collider.CompareTag ("Van"))
+	else if(hit.collider.CompareTag ("LargeObject"))
+	{
+    	// crashed into large obstacle
+	}	
+	else if(hit.collider.CompareTag ("SmallObject"))
 	{
     	// crashed into large obstacle
 	}	
