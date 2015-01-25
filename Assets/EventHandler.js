@@ -31,7 +31,7 @@ function OnTriggerEnter(col : Collider)
 	}
 	else if(col.CompareTag("Goal"))
 	{
-    	// heist successful
+    	gameHandler.finishedLevel();
 	}
 	else if(col.CompareTag ("Boundary"))
 	{
