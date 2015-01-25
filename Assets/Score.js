@@ -1,26 +1,25 @@
 ﻿#pragma strict
 
-private var score = 0;
 public var scoreUI : UI.Text;
 public var gamePaused = false;
 
 
-function Start() 
-{
-	score = 0;
-}
-
 function IncreaseScore()
 {
 
-	score++;
+	ScoreManager.incrementScore();
 	
-	scoreUI.text = "" + score;
+	scoreUI.text = "" + ScoreManager.getScore();
 }
 
 function gameOver()
 {
+	Application.LoadLevel("game-over");
+}
 
+function finishedLevel()
+{
+	Application.LoadLevel("game-finished");
 }
 
 
