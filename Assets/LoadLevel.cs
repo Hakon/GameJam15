@@ -13,6 +13,13 @@ public class LoadLevel : MonoBehaviour {
 		Application.LoadLevel (level);
 	}
 
+	public void LoadAndResetScene(string level) {
+		ScoreManager.reset ();
+		loadingImage.SetActive (true);
+		hintText.text = "Hint: " + generateHint ();
+		Application.LoadLevel (level);
+	}
+
 	public string generateHint() {
 		int i = Random.Range(0,hints.Length);
 		return (string) hints.GetValue(i);
