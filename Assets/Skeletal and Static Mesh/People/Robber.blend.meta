@@ -725,9 +725,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
     - serializedVersion: 16
       name: Robber walk
-      takeName: ArmatureAction_005
+      takeName: Default Take
       firstFrame: 50
-      lastFrame: 109
+      lastFrame: 108.000008
       wrapMode: 2
       orientationOffsetY: 0
       level: 0

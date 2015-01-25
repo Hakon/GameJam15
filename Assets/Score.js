@@ -1,6 +1,8 @@
 ﻿#pragma strict
 
-var score = 0;
+private var score = 0;
+public var scoreUI : UI.Text;
+
 
 function Start() 
 {
@@ -9,8 +11,10 @@ function Start()
 
 function IncreaseScore()
 {
-	score = score + 1;
-	Debug.Log(score);
+
+	score++;
+	
+	scoreUI.text = "" + score;
 }
 
 

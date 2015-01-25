@@ -758,8 +758,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Fat Guy Run
       takeName: ArmatureAction_003
-      firstFrame: 0
-      lastFrame: 50
+      firstFrame: 10
+      lastFrame: 44
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
