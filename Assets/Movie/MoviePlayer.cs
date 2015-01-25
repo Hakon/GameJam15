@@ -4,17 +4,28 @@ using System.Collections;
 public class MoviePlayer : MonoBehaviour {
 
 	public Texture[] texture;
-	public float fadeSpeed = 1.5f;
+	public float fadeSpeed = 10.5f;
+
+	private bool fadeUt = false;
+	private bool fadeIn = true;
 
 	void Start() {
 		StartCoroutine(kjor());
 	}
 
 	void Update(){
-
+		if(fadeUt){
+			fadeUt = false;
+			RenderSettings.ambientLight = Color.Lerp(RenderSettings.ambientLight, Color.black, fadeSpeed);
+		}
+		if(fadeIn){
+			fadeIn = false;
+			RenderSettings.ambientLight = Color.Lerp(RenderSettings.ambientLight, Color.white, fadeSpeed);
+		}
 	}
 
 	IEnumerator kjor(){
+		RenderSettings.ambientLight = Color.black;
 		renderer.material.mainTexture = texture[0];
 		yield return new WaitForSeconds(12);
 		renderer.material.mainTexture = texture[1];
@@ -38,12 +49,5 @@ public class MoviePlayer : MonoBehaviour {
 		yield return new WaitForSeconds(7);
 		RenderSettings.ambientLight = Color.black;
 
-	}
-
-	void fadeIn(){
-		Color.Lerp(RenderSettings.ambientLight, Color.white, fadeSpeed);
-	}
-	void fadeUt(){
-		Color.Lerp(RenderSettings.ambientLight, Color.black, fadeSpeed);
 	}
 }
