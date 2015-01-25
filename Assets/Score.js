@@ -19,7 +19,7 @@ function gameOver()
 
 function finishedLevel()
 {
-	Application.LoadLevel("game-finished");
+	Application.LoadLevelAdditive("level-finished");
 }
 
 
