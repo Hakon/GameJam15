@@ -36,18 +36,32 @@ public class MoviePlayer : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		renderer.material.mainTexture = texture[3];
 		RenderSettings.ambientLight = Color.white;
-		yield return new WaitForSeconds(7);
+		yield return new WaitForSeconds(2);
 		renderer.material.mainTexture = texture[4];
-		yield return new WaitForSeconds(5);
+
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[9];
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[10];
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[11];
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[12];
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[13];
+		yield return new WaitForSeconds(2);
+		renderer.material.mainTexture = texture[14];
+
+		yield return new WaitForSeconds(2);
 		renderer.material.mainTexture = texture[5];
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(3);
 		renderer.material.mainTexture = texture[6];
 		yield return new WaitForSeconds(6);
 		renderer.material.mainTexture = texture[7];
 		yield return new WaitForSeconds(7);
 		renderer.material.mainTexture = texture[8];
-		yield return new WaitForSeconds(7);
+		yield return new WaitForSeconds(5);
 		RenderSettings.ambientLight = Color.black;
-
+		Application.LoadLevel("main-scene");
 	}
 }
