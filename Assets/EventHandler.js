@@ -17,6 +17,7 @@ function OnControllerColliderHit(hit : ControllerColliderHit)
 	{
     	// crashed into large obstacle
 	}	
+
 	
 }
 
@@ -24,11 +25,34 @@ function OnTriggerEnter(col : Collider)
 {
 	if(col.CompareTag("Police"))
 	{
-    	// game over
+    	Debug.Log("Game Over");
+    	
 	}
 	else if(col.CompareTag("Goal"))
 	{
     	// heist successful
 	}
+	else if(col.CompareTag ("Boundary"))
+	{
+    	Debug.Log("has run too far");
+	}	
+	
+}
+
+function Update()
+{
+	
+	if(Input.GetKeyDown(KeyCode.Escape) && !gameHandler.gamePaused) 
+	{
+		Debug.Log("Pause menu");
+		Time.timeScale = 0.0;
+		gameHandler.gamePaused = !gameHandler.gamePaused;
+		while(gameHandler.gamePaused)
+		{
+			Debug.Log("Kake");
+		}
+		
+	}
+	
 	
 }

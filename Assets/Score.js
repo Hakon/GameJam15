@@ -2,6 +2,7 @@
 
 private var score = 0;
 public var scoreUI : UI.Text;
+public var gamePaused = false;
 
 
 function Start() 
