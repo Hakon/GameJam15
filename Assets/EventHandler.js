@@ -47,10 +47,6 @@ function Update()
 		Debug.Log("Pause menu");
 		Time.timeScale = 0.0;
 		gameHandler.gamePaused = !gameHandler.gamePaused;
-		while(gameHandler.gamePaused)
-		{
-			Debug.Log("Kake");
-		}
 		
 	}
 	
