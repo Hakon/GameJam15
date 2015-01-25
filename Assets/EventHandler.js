@@ -2,8 +2,9 @@
 
 public var gameHandler : Score;
 
+
 function OnControllerColliderHit(hit : ControllerColliderHit)
-{
+{	
     if(hit.collider.CompareTag ("Money"))
     {
     	Destroy(hit.collider.gameObject);
@@ -22,7 +23,7 @@ function OnControllerColliderHit(hit : ControllerColliderHit)
 }
 
 function OnTriggerEnter(col : Collider)
-{
+{	
 	if(col.CompareTag("Police"))
 	{
     	Debug.Log("Game Over");
@@ -34,7 +35,6 @@ function OnTriggerEnter(col : Collider)
 	}
 	else if(col.CompareTag ("Boundary"))
 	{
-    	Debug.Log("has run too far");
 	}	
 	
 }
@@ -42,12 +42,8 @@ function OnTriggerEnter(col : Collider)
 function Update()
 {
 	
-	if(Input.GetKeyDown(KeyCode.Escape) && !gameHandler.gamePaused) 
+	if(Input.GetKeyDown(KeyCode.Escape)) 
 	{
-		Debug.Log("Pause menu");
-		Time.timeScale = 0.0;
-		gameHandler.gamePaused = !gameHandler.gamePaused;
-		
 	}
 	
 	
