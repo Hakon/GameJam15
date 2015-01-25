@@ -26,7 +26,7 @@ function OnTriggerEnter(col : Collider)
 {	
 	if(col.CompareTag("Police"))
 	{
-    	Debug.Log("Game Over");
+    	gameHandler.gameOver();
     	
 	}
 	else if(col.CompareTag("Goal"))

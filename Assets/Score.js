@@ -18,6 +18,11 @@ function IncreaseScore()
 	scoreUI.text = "" + score;
 }
 
+function gameOver()
+{
+
+}
+
 
 function Update () 
 {
